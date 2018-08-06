@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="">
+    <ion-title>
+      Milky Lane
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+    <div *ngIf="counter === 0" class="items">
+      <h1>Jacobs Original Blend</h1>
+      <h2>Quantity: {{quantity}}</h2>
+      <h3>Price per serving R{{price}}</h3>
+      <button  ion-button (click)="quantityCalc('minus')">-</button>
+      <button  ion-button (click)="quantityCalc('plus')">+</button>
+      <button full ion-button (click)="perfomOrder()">Order</button>
+    </div>
+    <div *ngIf="counter === 1" class="receit">
+      <h1>Thank You</h1>
+      <h2>Order Receit</h2>
+      <h3>quatity : {{quantity}}</h3>
+      <h3>Total Price: {{price}}</h3>
+    </div>
+</ion-content>
